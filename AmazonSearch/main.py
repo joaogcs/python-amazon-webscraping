@@ -137,7 +137,7 @@ class App(AttributeManager):
                     pass
             else:
                 logging.fatal(f"Loading is taking too long, aborting...")
-                raise
+                # raise
 
 
 """ AmazonSearch application which contains all control tools about what can be done within amazon website.
