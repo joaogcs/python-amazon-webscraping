@@ -54,7 +54,7 @@ source ./setup-env-linux.sh
 Run the script
 
 ```bash
-./setup-env-linux.bat
+.\setup-env-windows.ps1
 ```
 
 > :information_source: **Note**
@@ -64,7 +64,7 @@ Run the script
 > If it not appears, you can try to activate virtual environment by running:
 >
 > ```bash
-> .venv/bin/activate
+> .venv\Scripts\activate.ps1
 > ```
 
 ## Run Amazon - Web Scraper
