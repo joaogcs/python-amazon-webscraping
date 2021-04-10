@@ -77,6 +77,12 @@ python3 -B -m scripts.run
 
 The exported CSV can be found in `csvs/` folder.
 
+> :information_source: **Note** - Running in Windows for the first time 
+>
+> You can be asked to give firewall permissions to Python when running for the first time. Select Allow Access or it won't be able to connect to the Internet.
+>
+> ![windows-firewall-popup](assets/windows-firewall-popup.png) 
+
 ## Configuring Amazon - Web Scraper
 
 All configuration are available on the file `scripts/run.py`. You can change
