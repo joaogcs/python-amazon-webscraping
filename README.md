@@ -1,12 +1,3 @@
-You can search for any text and retrieve the result to a csv in the order they were listed.
-
-Configuration file: `scripts/run.py`
-
-The properties exported to CSV are:
-* Page_Found: the result page number which the item was found
-* Product name: the exact name showed in result page
-* Price: the exact price in BRL, it can be None as the page can show some items without price
-
 # Amazon - Web Scraper
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/joaogcs/python-amazon-webscraping)
@@ -81,8 +72,10 @@ Run the script
 To run the scraper, follow these steps:
 
 ```bash
-python3 -m scripts/run.py
+python3 -B -m scripts.run
 ```
+
+The exported CSV can be found in `csvs/` folder.
 
 ## Configuring Amazon - Web Scraper
 
