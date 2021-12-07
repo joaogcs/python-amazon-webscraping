@@ -10,7 +10,7 @@ python3 -m virtualenv .venv
 source .venv/bin/activate
 
 # install modules on virtual environment
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt --no-cache-dir
 
 # run after install
 # python3 -B -m scripts.run

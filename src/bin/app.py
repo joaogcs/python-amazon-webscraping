@@ -7,7 +7,7 @@ from datetime import datetime
 
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -102,12 +102,20 @@ class App(AttributeManager):
         logging.info(
             f"Running app with silent mode set to {self.attributes['silent_mode']}")
 
-        options = Options()
+        options = webdriver.ChromeOptions()
         if self.attributes['silent_mode']:
-            options.add_argument('--headless')
-            options.add_argument('--disable-gpu')
+            options.add_argument("--headless") 
 
-        self.attributes['webdriver'] = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
+
+        
+        options.add_argument("--no-sandbox") 
+        options.add_argument("--disable-setuid-sandbox") 
+        options.add_argument("--disable-dev-shm-using") 
+        options.add_argument("--disable-extensions") 
+        options.add_argument("--disable-gpu") 
+        options.add_argument("disable-infobars")
+
+        self.attributes['webdriver'] = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     def close(self):
         logging.info(f"Closing app")
