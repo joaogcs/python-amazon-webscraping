@@ -15,6 +15,8 @@ The properties you'll get are:
 
 :arrow_forward: ​Demonstration
 
+![Preview](assets/preview.gif) 
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
